@@ -1,0 +1,13 @@
+{
+  "name": "gatleycomputers-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^25.3.0",
+    "csv-writer": "^1.6.0",
+    "pdfkit": "^0.13.0"
+  }
+}

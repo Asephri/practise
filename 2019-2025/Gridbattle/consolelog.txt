@@ -1,0 +1,26 @@
+----------------------------------------------------------------------------------------------------
+voidFighter - New Session
+Copyright (C) 2023-2024 Asephri. All rights reserved.
+consolelog.txt
+----------------------------------------------------------------------------------------------------
+Getting Textures
+Adding Textures to cache.
+Assigning memory blocks.
+Successful.
+Intialising the player.
+Getting Textures
+Adding Textures to cache.
+Assigning memory blocks.
+Successful.
+Getting Textures
+Adding Textures to cache.
+Assigning memory blocks.
+Successful.
+Successful.
+SDL_QUIT has been called! Closing application.
+Quitting Audio mixer.
+Quitting SDL_Image.
+Destroying the app renderer.
+Destroying the app window
+Quitting the application.
+Successful.

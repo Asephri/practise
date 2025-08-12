@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron:700);
+
+/*
+  Starfield background (optimized)
+  Based on: https://jsfiddle.net/s_light/02pftd9h/
+*/
+
+#space {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 10% 15%, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 20% 35%, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 25% 80%, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 45% 20%, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 65% 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 5% 80%, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 80% 60%, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 50vw 50vh;
+  animation: starmove 120s infinite;
+  opacity: 0.1;
+  left: -100vw;
+}
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  animation-delay: 0s;
+}
+.stars:nth-child(2) {
+  background-position: 0% 50%;
+  animation-delay: 1s;
+  left: - 200vw;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 10s;
+  animation-duration: 200s;
+  transform: rotate(30deg);
+}
+.stars:nth-child(4) {
+  background-position: 40% -80%;
+  animation-delay: 15s;
+  transform: rotate(-70deg);
+}
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 20s;
+  transform: rotate(110deg);
+}
+.stars:nth-child(6) {
+  background-position: 60% 45%;
+  animation-delay: 25s;
+  transform: rotate(180deg);
+}
+
+@keyframes starmove {
+  0% {
+    opacity: 0.3;
+    transform: translate(0, -1%);
+    animation-timing-function: ease-in;
+  } 
+  20% {
+    opacity: 1.0;
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translate(50%, 10%);
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    opacity: 1.0;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    opacity: 0.3;
+    transform: translate(100%, -2%);
+    animation-timing-function: ease-out;
+  }
+}
