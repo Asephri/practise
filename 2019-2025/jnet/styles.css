@@ -1,0 +1,187 @@
+/* styles.css */
+* {
+	box-sizing: border-box;
+}
+/* Pink thick hr line */
+hr.red {
+  border: 1px solid red;
+}
+/* Dashed paragraph Outline */
+	p {outline-color:red;}
+	p.dashed {outline-style: dashed;}
+	p.dotted {
+  border-bottom: 1px dotted rgba(226,24,24,1);
+  width: auto;
+}
+/* Style the body */
+body {
+	background-color: black;
+	font-family: "monaco", monospace;
+	margin: 0;
+}
+/* Header/Title */
+.header {
+	padding: 1px;
+	text-align: center;
+	color: lime;
+}
+/* Heading Font size */
+.header h1 {
+	font-family: "monaco", monospace;
+	white-space: pre;
+	text-align: center;
+	font-size: 16px;
+}
+/* ----- Navigation bar ----- */
+/* Style  */
+.navbar {
+	overflow: hidden;
+	background-image: radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,0.75) 0%, rgba(160,6,6,0.25) 90% );
+	border-radius: 10px;
+}
+/* Style links */
+.navbar a {
+	float: left;
+	display: block;
+	color: lime;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+}
+/* Right-aligned link */
+.navbar a.right {
+	float: right;
+}
+/* Change color on hover */
+.navbar a:hover {
+	background-color: rgba(160,6,6,1);
+	color: orange;
+}
+/* Content Areas * /
+/* Sidebar */
+.side {
+	-ms-flex: 30%; /* IE10 */
+	flex: 30%;
+	color: lime;
+	padding: 1px;
+	background-image: radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,0.75) 0%, rgba(160,6,6,0.25) 90% );
+	text-align: center;
+	border-radius: 10px;
+}
+
+/* Main column */
+.main {   
+	-ms-flex: 64%; /* IE10 */
+	flex: 64%;
+	color: white;
+	padding: 1px;
+	text-align: center;
+	border-radius: 10px;
+}
+/* ----- Grid ----- */
+.table
+{
+    table-layout: fixed;
+	margin-left: auto;
+	margin-right: auto;
+    width: 1280px;
+}
+.row {  
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	-ms-flex-wrap: wrap; /* IE10 */
+	flex-wrap: wrap;
+}
+/* Create two equal columns that sits next to each other */
+.column {
+	-ms-flex: 50%; /* IE 10 */
+	flex: 50%;
+	padding: 8px;
+}
+.column img {
+	vertical-align: middle;
+	padding: 4px;
+	background: rgb(0,255,0);
+	background: linear-gradient(90deg, rgba(0,255,0,0.75) 0%, rgba(0,127,0,0.75) 16%, rgba(0,63,0,0.75) 100%);
+	border-radius: 5px;
+	width: 100%;
+}
+/* Footer */
+.footer {
+	text-align: center;
+	color: orange;
+	width: 100%;
+	border-radius: 25px;
+}
+/* ----- Responsive layout ----- */
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+	.row {   
+		flex-direction: column;
+	}
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+	.navbar a {
+		float: none;
+		width: 100%;
+	}
+}
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  /* img size is 50x50 */
+  background: url('50px.png') repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 4s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 4s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 4s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 4s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
