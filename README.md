@@ -2,7 +2,6 @@
 **2019–2025 Archive**  
 
 This repository serves as an **archive of personal projects, exercises, and learning** spanning 2019 to 2025 which have been merged here without the comments so the history is gone from my page.
-It provides a record of my development and exploration of various skills over time, showcasing my iterative growth in technology and problem-solving.
 
 > **Note:** This archive is intended for reference and practice.
 > The content does **not reflect my current expertise or professional capabilities**.
